@@ -95,3 +95,10 @@ Setiap anggota wajib membuat **YouTube Playlist** pribadi yang berisi:
 > **Penting:** Video 3 (Live Coding) harus menampilkan setiap keystroke secara nyata. Copy-paste tidak diperbolehkan. Error dan debugging harus dibiarkan terlihat apa adanya.
 
 ---
+<div align="center">
+
+**STMIK Tazkia · Kelompok 4 · Data Structures & Algorithms**  
+*Good luck — and good commits!* 🚀
+
+</div>
+
