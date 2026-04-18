@@ -57,26 +57,22 @@ group4-trainstation/
 
 ### 👤 S1 — Raihan Muhammad Faqih (`student1/`)
 
-#### 📦 `TrainSchedule.java` — Dynamic Array
-**Deskripsi:**  
+#### 📦 `TrainSchedule.java` — Dynamic Array 
 Modul ini mengimplementasikan struktur data **Dynamic Array** dari nol menggunakan plain Java array (`Object[]`) dengan mekanisme resize manual. Digunakan untuk menyimpan dan mengelola seluruh jadwal kereta yang beroperasi di stasiun.
 
 ### 👤 S2 — Cantik Rahmi Shofiyanti (`student2/`)
 
 #### 📦 `BoardingQueue.java` — Queue (Linked Nodes)
-**Deskripsi:**  
 Modul ini mengimplementasikan struktur data **Queue** (antrean) menggunakan custom inner class `Node` dengan single-linked list. Digunakan untuk mengatur urutan penumpang yang akan boarding ke kereta secara **First In, First Out (FIFO)** — penumpang yang datang lebih awal, boarding lebih awal.
 
 ### 👤 S3 — Alya Syahla (`student3/`)
 
-#### 📦 `JourneyLogStack.java` — Stack (Linked Nodes)
-**Deskripsi:**  
+#### 📦 `JourneyLogStack.java` — Stack (Linked Nodes) 
 Modul ini mengimplementasikan struktur data **Stack** (tumpukan) menggunakan custom inner class `Node` dengan single-linked list. Digunakan untuk mencatat riwayat kereta yang telah berangkat dari stasiun, dengan prinsip **Last In, First Out (LIFO)** — log perjalanan terakhir dapat di-undo (dihapus) terlebih dahulu.
 
 ### 👤 S4 — Fachrel Fayaaz Hibatullah (`student4/`)
 
 #### 📦 `RouteTrainMap.java` — HashMap (Array + Chaining)
-**Deskripsi:**  
 Modul ini mengimplementasikan **HashMap** dari nol menggunakan array of buckets dengan teknik **separate chaining** (setiap bucket adalah linked list of entries) untuk menangani collision. Digunakan untuk memetakan kode rute (misal: `"JKT-SBY"`) ke daftar kereta yang melayani rute tersebut.
 
 ---
