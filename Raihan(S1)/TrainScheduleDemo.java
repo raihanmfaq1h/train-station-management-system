@@ -32,5 +32,6 @@ public class TrainScheduleDemo {
 
         System.out.println("\n== LIST ALL (setelah hapus T003) ==");
         schedule.listAll();
+    
     }
 }
