@@ -16,7 +16,7 @@ public class BoardingQueueDemo {
             System.out.println("Pilih: ");
 
             int pilih = input.nextInt();
-            input.nextLine(); // WAJIB baie gak error
+            input.nextLine(); // WAJIB bair gak error
 
             if (pilih ==1) {
                 System.out.print("Nama:hami");
