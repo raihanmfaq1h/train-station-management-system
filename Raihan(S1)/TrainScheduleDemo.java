@@ -1,7 +1,6 @@
 package Raihan;
 import shared.Train;
 
-
 public class TrainScheduleDemo {
     public static void main(String[] args) {
 
@@ -11,9 +10,6 @@ public class TrainScheduleDemo {
         schedule.addTrain(new Train("T002", "Gajayana", "Jakarta", "Malang", "08:30"));
         schedule.addTrain(new Train("T003", "Taksaka", "Yogyakarta", "Jakarta", "06:00"));
         schedule.addTrain(new Train("T004", "Sembrani", "Jakarta", "Surabaya", "20:00"));
-
- //       System.out.println("Total: " + schedule.size());
- //       System.out.println("Kosong? " + schedule.isEmpty());
 
         schedule.listAll();
 
