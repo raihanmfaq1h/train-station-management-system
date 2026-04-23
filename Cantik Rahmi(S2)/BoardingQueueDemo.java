@@ -13,27 +13,27 @@ public class BoardingQueueDemo {
             System.out.println("3. Lihat Depan");
             System.out.println("4. Tampilkan");
             System.out.println("0. Keluar");
-            System.out.print("Pilih: ");
+            System.out.println("Pilih: ");
 
             int pilih = input.nextInt();
-            input.nextLine(); // WAJIB biar gak error
+            input.nextLine(); // WAJIB baie gak error
 
-            if (pilih == 1) {
-                System.out.print("Nama: ");
+            if (pilih ==1) {
+                System.out.print("Nama:hami");
                 String nama = input.nextLine();
                 queue.enqueue(nama);
 
-            } else if (pilih == 2) {
+            } else if (pilih ==2) {
                 queue.dequeue();
 
-            } else if (pilih == 3) {
+            } else if (pilih ==3) {
                 queue.peek();
 
-            } else if (pilih == 4) {
+            } else if (pilih ==4) {
                 queue.display();
 
-            } else if (pilih == 0) {
-                System.out.println("Keluar program.");
+            } else if (pilih ==0) {
+                System.out.println("Keluar program");
                 break;
 
             } else {
