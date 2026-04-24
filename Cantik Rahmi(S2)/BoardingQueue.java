@@ -7,11 +7,20 @@ public class BoardingQueue {
     // Tambah penumpang
     public void enqueue(String name) {
         queue.add(name);
-        System.out.println(name + "masuk ke antrian.");
+        System.out.println(name + " masuk ke antrian.");
     }
 
-    // Proses Boarding
+    // Proses boarding
     public void dequeue() {
+        if (queue.isEmpty()) {
+            System.out.println("Antrian kosong!");
+        } else {
+            System.out.println(queue.poll() + " sudah boarding.");
+        }
+    }
+
+    // Lihat depan
+    public void peek() {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
         } else {
@@ -29,4 +38,5 @@ public class BoardingQueue {
                 System.out.println("- " + p);
             }
         }
-    }}
+    }
+}
