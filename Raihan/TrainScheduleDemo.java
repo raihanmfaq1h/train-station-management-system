@@ -1,5 +1,4 @@
 package Raihan;
-
 import shared.Train;
 
 public class TrainScheduleDemo {
