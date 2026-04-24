@@ -1,103 +1,81 @@
-package S2;
-
-import shared.Train;
-
 public class BoardingQueue {
 
-    // Node class (Linked List)
-    class Node {
-        Train data;
+    // node class (linked list)
+    private class Node {
+        Passenger data;
         Node next;
 
-        Node(Train data) {
+        Node(Passenger data) {
             this.data = data;
             this.next = null;
         }
     }
-
     private Node front;
     private Node rear;
     private int size;
 
-    // Constructor
     public BoardingQueue() {
-        front = rear = null;
+        front = null;
+        rear = null;
         size = 0;
     }
+}
 
-    // Enqueue (tambah ke antrian)
-    public void enqueue(Train train) {
-        Node newNode = new Node(train);
+// enqueue (tambah ke belakang)
+public void enqueue(Passenger p) {
+    Node newNode = new Node(p);
 
-        if (isEmpty()) {
-            front = rear = newNode;
-        } else {
-            rear.next = newNode;
-            rear = newNode;
-        }
+    if (isEmpty()) {
+        front = rear = newNode;
+    } else {
+        rear.next = newNode;
+        rear =  newNode;
+    }
+    size++;
+}
 
-        size++;
-        System.out.println("Boarding ditambahkan: " +
-                train.getId() + " (" +
-                train.getOrigin() + " → " +
-                train.getDestination() + ")");
+// dequeue (ambil dari depan)
+public Passenger dequeue() {
+    if (isEmpty()) {
+        System.out.println("Error: Antrian boarding sudah kosong.")
+        return null;
     }
 
-    // Dequeue (proses boarding)
-    public Train dequeue() {
-        if (isEmpty()) {
-            System.out.println("Antrian boarding kosong!");
-            return null;
-        }
+    Passenger removed = front.data;
+    System.out.println("Boarding: " + removed.getName());
+    return null;
+    size--;
 
-        Train removed = front.data;
-        front = front.next;
-
-        if (front == null) {
-            rear = null;
-        }
-
-        size--;
-        System.out.println("Boarding diproses: " + removed.getId());
-        return removed;
+    if (front == null) {
+        rear = null;
     }
+    return removed;
+}
 
-    // Peek (lihat depan tanpa hapus)
-    public Train peek() {
-        if (isEmpty()) {
-            return null;
-        }
-        return front.data;
+// lihat depan
+public Passenger peek() {
+    if (isempty()) {
+        return null;
     }
+    return front.data;
+}
 
-    // Cek kosong
-    public boolean isEmpty() {
-        return front == null;
-    }
+public boolean isEmpty() {
+    System.out.println("=== Antrian Boarding (" + size +  penumpang) ===");
 
-    // Jumlah data
-    public int size() {
-        return size;
-    }
+    if (isEmpty()) {
+    System.out.println("kosong.");
+    return;
+}
 
-    // Tampilkan antrian
-    public void displayBoardingQueue() {
-        if (isEmpty()) {
-            System.out.println("Antrian boarding kosong!");
-            return;
-        }
+Node current = front;
+int i = 1;
 
-        Node current = front;
-        int i = 1;
-
-        System.out.println("=== Antrian Boarding ===");
-        while (current != null) {
-            System.out.println(i + ". " +
-                    current.data.getId() + " | " +
-                    current.data.getOrigin() + " → " +
-                    current.data.getDestination());
-            current = current.next;
-            i++;
-        }
-    }
+while (current != null) {
+Pasenger p = current.data;
+System.out.println(i + ". [" + p.getId() + "] " + p.getName() + " - " + p.getTicketClass());
+current = current.next;
+i++;
+}
+}
 }
