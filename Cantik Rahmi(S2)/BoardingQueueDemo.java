@@ -4,7 +4,7 @@ public class BoardingQueueDemo {
         BoardingQueue queue = new BoardingQueue();
 
         queue.enqueue(new Passenger("PX01", "Rina Kartika", "Eksekutif"));
-        queue.enqueue(new Passenger("PX02", "Dudi Prasetyo", "Bisnis"));
+        queue.enqueue(new Passenger("PX02", "Dodi Prasetyo", "Bisnis"));
         queue.enqueue(new Passenger("PX03", "Susi Susilawati", "Ekonomi"));
 
         // Tampilkan antrian
@@ -20,6 +20,6 @@ public class BoardingQueueDemo {
         queue.displayQueue();
 
         queue.dequeue();
-        queue.dequeue(); // harus muncul eroro
+        queue.dequeue(); // harus muncul error
     }
 }
