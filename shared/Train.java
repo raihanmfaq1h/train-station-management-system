@@ -1,13 +1,13 @@
 package shared;
 
-public class train{
+public class Train{
     private String name;
     private String id;
     private String origin;
     private String destination;
     private String departureTime;
 
-    public train(String name, String id, String origin, String destination, String departureTime){
+    public Train(String name, String id, String origin, String destination, String departureTime){
         this.name = name;
         this.id = id;
         this.origin = origin;

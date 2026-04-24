@@ -1,15 +1,15 @@
 package Raihan;
-import shared.train;
+import shared.Train;
 
 
 public class TrainSchedule {
 
-    private train[] data;
+    private Train[] data;
     private int size;
     private static final int INITIAL_CAPACITY = 2;
 
     public TrainSchedule() {
-        data = new train[INITIAL_CAPACITY];
+        data = new Train[INITIAL_CAPACITY];
         size = 0;
     }
 
@@ -17,14 +17,14 @@ public class TrainSchedule {
         int newCapacity = data.length * 2;
 
         System.out.println("[INFO] Array penuh (kapasitas " + data.length + "). " + "Resize ke kapasitas " + newCapacity + "...");
-        train[] newData = new train[newCapacity];
+        Train[] newData = new Train[newCapacity];
         
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
         }
         data = newData;
     }
-    public void addTrain(train t) {
+    public void addTrain(Train t) {
         if(size == data.length) {
             resize();
         }
@@ -98,9 +98,9 @@ public class TrainSchedule {
 
         System.out.println("=== DeMO TrainSchedule - Dynamic Array ===\n");
 
-        schedule.addTrain(new train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
-        schedule.addTrain(new train("T002", "Gajayana", "jakarta", "Malang", "08:30"));
-        schedule.addTrain(new train("T003", "Takasaka", "Yogyakarta", "jakarta", "06:00"));
+        schedule.addTrain(new Train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
+        schedule.addTrain(new Train("T002", "Gajayana", "jakarta", "Malang", "08:30"));
+        schedule.addTrain(new Train("T003", "Takasaka", "Yogyakarta", "jakarta", "06:00"));
 
         System.out.println();
 
