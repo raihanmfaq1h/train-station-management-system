@@ -1,6 +1,8 @@
+package cantikRahmi;
+import shared.Passenger;
+
 public class BoardingQueueDemo {
     public static void main(String[] args) {
-        
         BoardingQueue queue = new BoardingQueue();
 
         queue.enqueue(new Passenger("PX01", "Rina Kartika", "Eksekutif"));

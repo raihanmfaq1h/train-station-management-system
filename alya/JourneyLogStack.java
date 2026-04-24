@@ -1,13 +1,13 @@
-class TrainHistoryStrack {
+class JourneyLogStack {
 
     // Node class(linked list)
     class Node {
         String data;
-        Node ext;
+        Node next;
 
         Node(String data) {
             this.data = data;
-            thisnext = null;
+            this.next = null;
         }
     }
      
@@ -15,7 +15,7 @@ class TrainHistoryStrack {
     private int size;
 
     // Constructor
-    public TrainHistoryStrack() {
+    public JourneyLogStack() {
         top = null;
         size = 0;
     }

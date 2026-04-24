@@ -1,40 +1,15 @@
+package Raihan;
+import shared.train;
+
+
 public class TrainSchedule {
-    static class Train {
-        String id;
-        String name;
-        String origin;
-        String destination;
-        String departureTime;
 
-        public Train(String id, String name, String origin, String destination, String departureTime) {
-
-            this.id = id;
-            this.name = name;
-            this.origin = origin;
-            this.destination = destination;
-            this.departureTime = departureTime;
-
-        }
-
-        public String getId()               { return id;            }
-        public String getName()             { return name;          }
-        public String getOrigin()           { return origin;        }
-        public String getDestination()      { return destination;   }
-        public String getDepartureTime()    { return departureTime; }
-
-        @Override
-        public String toString() {
-            return "[" + id + "] " + name + " | " + origin + " -> " + destination + " | " + departureTime;
-
-        }
-    }
-    
-    private Train[] data;
+    private train[] data;
     private int size;
     private static final int INITIAL_CAPACITY = 2;
 
     public TrainSchedule() {
-        data = new Train[INITIAL_CAPACITY];
+        data = new train[INITIAL_CAPACITY];
         size = 0;
     }
 
@@ -42,14 +17,14 @@ public class TrainSchedule {
         int newCapacity = data.length * 2;
 
         System.out.println("[INFO] Array penuh (kapasitas " + data.length + "). " + "Resize ke kapasitas " + newCapacity + "...");
-        Train[] newData = new Train[newCapacity];
+        train[] newData = new train[newCapacity];
         
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
         }
         data = newData;
     }
-    public void addTrain(Train t) {
+    public void addTrain(train t) {
         if(size == data.length) {
             resize();
         }
@@ -123,9 +98,9 @@ public class TrainSchedule {
 
         System.out.println("=== DeMO TrainSchedule - Dynamic Array ===\n");
 
-        schedule.addTrain(new Train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
-        schedule.addTrain(new Train("T002", "Gajayana", "jakarta", "Malang", "08:30"));
-        schedule.addTrain(new Train("T003", "Takasaka", "Yogyakarta", "jakarta", "06:00"));
+        schedule.addTrain(new train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
+        schedule.addTrain(new train("T002", "Gajayana", "jakarta", "Malang", "08:30"));
+        schedule.addTrain(new train("T003", "Takasaka", "Yogyakarta", "jakarta", "06:00"));
 
         System.out.println();
 

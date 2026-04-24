@@ -1,3 +1,6 @@
+package cantikRahmi;
+import shared.Passenger;
+
 public class BoardingQueue {
 
     // Node class (linked list)
