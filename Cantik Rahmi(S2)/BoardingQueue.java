@@ -10,7 +10,7 @@ public class BoardingQueue {
         System.out.println(name + " masuk ke antrian.");
     }
 
-    // Proses boarding
+    // Proses Boarding
     public void dequeue() {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
