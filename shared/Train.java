@@ -1,4 +1,5 @@
 package shared;
+
 public class Train {
 
     private String id;
@@ -34,4 +35,4 @@ public class Train {
         this.destination = destination;
     }
 
-    //To
+}
