@@ -2,20 +2,27 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BoardingQueue {
-    private Queue<String> queue = new LinkedList<>();
+
+    private Queue<String> queue;
+
+    // Constructor
+    public BoardingQueue() {
+        queue = new LinkedList<>();
+    }
 
     // Tambah penumpang
     public void enqueue(String name) {
-        queue.add(name);
+        queue.offer(name);
         System.out.println(name + " masuk ke antrian.");
     }
 
-    // Proses Boarding
+    // Proses boarding
     public void dequeue() {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
         } else {
-            System.out.println(queue.poll() + " sudah boarding.");
+            String keluar = queue.poll();
+            System.out.println(keluar + " sudah boarding.");
         }
     }
 
