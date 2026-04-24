@@ -1,13 +1,13 @@
 public class BoardingQueueDemo {
     public static void main(String[] args) {
-
+        
         BoardingQueue queue = new BoardingQueue();
 
         queue.enqueue(new Passenger("PX01", "Rina Kartika", "Eksekutif"));
-        queue.enqueue(new Passenger("PX02", "Dodi Prasetyo", "Bisnis"));
+        queue.enqueue(new Passenger("PX02", "Dudi Prasetyo", "Bisnis"));
         queue.enqueue(new Passenger("PX03", "Susi Susilawati", "Ekonomi"));
 
-        // tampilkan antrian
+        // Tampilkan antrian
         queue.displayQueue();
 
         // lihat yang depan
@@ -20,6 +20,6 @@ public class BoardingQueueDemo {
         queue.displayQueue();
 
         queue.dequeue();
-        queue.dequeue(); // harus muncul error
+        queue.dequeue(); // harus muncul eroro
     }
 }
