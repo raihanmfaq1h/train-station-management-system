@@ -1,4 +1,5 @@
-package Raihan;
+package Raihan(1);
+
 import shared.Train;
 
 public class TrainScheduleDemo {
@@ -6,10 +7,10 @@ public class TrainScheduleDemo {
 
         TrainSchedule schedule = new TrainSchedule();
 
-        schedule.addTrain(new Train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
-        schedule.addTrain(new Train("T002", "Gajayana", "Jakarta", "Malang", "08:30"));
-        schedule.addTrain(new Train("T003", "Taksaka", "Yogyakarta", "Jakarta", "06:00"));
-        schedule.addTrain(new Train("T004", "Sembrani", "Jakarta", "Surabaya", "20:00"));
+        schedule.addTrain(new train("T001", "Argo Bromo", "Jakarta", "Surabaya"));
+        schedule.addTrain(new train("T002", "Gajayana", "Jakarta", "Malang"));
+        schedule.addTrain(new train("T003", "Taksaka", "Yogyakarta", "Jakarta"));
+        schedule.addTrain(new train("T004", "Sembrani", "Jakarta", "Surabaya"));
 
         schedule.listAll();
 
