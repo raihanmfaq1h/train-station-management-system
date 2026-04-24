@@ -1,6 +1,6 @@
 public class BoardingQueue {
 
-    // node class (linked list)
+    // Node class (linked list)
     private class Node {
         Passenger data;
         Node next;
@@ -10,6 +10,7 @@ public class BoardingQueue {
             this.next = null;
         }
     }
+
     private Node front;
     private Node rear;
     private int size;
@@ -19,63 +20,77 @@ public class BoardingQueue {
         rear = null;
         size = 0;
     }
-}
 
-// enqueue (tambah ke belakang)
-public void enqueue(Passenger p) {
-    Node newNode = new Node(p);
+    // enqueue (tambah ke belakang)
+    public void enqueue(Passenger p) {
+        Node newNode = new Node(p);
 
-    if (isEmpty()) {
-        front = rear = newNode;
-    } else {
-        rear.next = newNode;
-        rear =  newNode;
-    }
-    size++;
-}
+        if (isEmpty()) {
+            front = rear = newNode;
+        } else {
+            rear.next = newNode;
+            rear = newNode;
+        }
 
-// dequeue (ambil dari depan)
-public Passenger dequeue() {
-    if (isEmpty()) {
-        System.out.println("Error: Antrian boarding sudah kosong.")
-        return null;
+        size++;
     }
 
-    Passenger removed = front.data;
-    System.out.println("Boarding: " + removed.getName());
-    return null;
-    size--;
+    // dequeue (ambil dari depan)
+    public Passenger dequeue() {
+        if (isEmpty()) {
+            System.out.println("Error: Antrian boarding sudah kosong.");
+            return null;
+        }
 
-    if (front == null) {
-        rear = null;
+        Passenger removed = front.data;
+        System.out.println("Boarding: " + removed.getName());
+
+        front = front.next; // pindah ke node berikutnya
+        size--;
+
+        if (front == null) {
+            rear = null;
+        }
+
+        return removed;
     }
-    return removed;
-}
 
-// lihat depan
-public Passenger peek() {
-    if (isempty()) {
-        return null;
+    // lihat depan
+    public Passenger peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        return front.data;
     }
-    return front.data;
-}
 
-public boolean isEmpty() {
-    System.out.println("=== Antrian Boarding (" + size +  penumpang) ===");
+    // cek kosong
+    public boolean isEmpty() {
+        return front == null;
+    }
 
-    if (isEmpty()) {
-    System.out.println("kosong.");
-    return;
-}
+    // size
+    public int size() {
+        return size;
+    }
 
-Node current = front;
-int i = 1;
+    // tampilkan queue
+    public void displayQueue() {
+        if (isEmpty()) {
+            System.out.println("=== Antrian Boarding kosong ===");
+            return;
+        }
 
-while (current != null) {
-Pasenger p = current.data;
-System.out.println(i + ". [" + p.getId() + "] " + p.getName() + " - " + p.getTicketClass());
-current = current.next;
-i++;
-}
-}
+        System.out.println("=== Antrian Boarding (" + size + " penumpang) ===");
+
+        Node current = front;
+        int i = 1;
+
+        while (current != null) {
+            Passenger p = current.data;
+            System.out.println(i + ". [" + p.getId() + "] "
+                    + p.getName() + " - " + p.getTicketClass());
+            current = current.next;
+            i++;
+        }
+    }
 }
