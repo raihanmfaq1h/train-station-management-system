@@ -2,17 +2,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BoardingQueue {
-
-    private Queue<String> queue;
-
-    // Constructor
-    public BoardingQueue() {
-        queue = new LinkedList<>();
-    }
+    private Queue<String> queue = new LinkedList<>();
 
     // Tambah penumpang
-    public void enqueue(String name) {
-        queue.offer(name);
+    public void enqueueI(String name) {
+        queue.add(name);
         System.out.println(name + " masuk ke antrian.");
     }
 
@@ -21,17 +15,16 @@ public class BoardingQueue {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
         } else {
-            String keluar = queue.poll();
-            System.out.println(keluar + " sudah boarding.");
+            System.out.println("Depan: " + queue.peek());
         }
     }
 
     // Lihat depan
     public void peek() {
         if (queue.isEmpty()) {
-            System.out.println("Antrian kosong!");
+            System.out.println("Antrian kosong");
         } else {
-            System.out.println("Depan: " + queue.peek());
+            System.out.println("Depan:" + queue.peek());
         }
     }
 
@@ -40,7 +33,7 @@ public class BoardingQueue {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
         } else {
-            System.out.println("Isi antrian:");
+            System.out.println("Isi antrian;");
             for (String p : queue) {
                 System.out.println("- " + p);
             }
