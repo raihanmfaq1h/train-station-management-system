@@ -5,38 +5,28 @@ public class BoardingQueue {
     private Queue<String> queue = new LinkedList<>();
 
     // Tambah penumpang
-    public void  enqueue(String name) {
+    public void enqueue(String name) {
         queue.add(name);
-        System.out.println(name + " masuk ke antrian.");
+        System.out.println(name + "masuk ke antrian.");
     }
 
-    // proses boarding
+    // Proses Boarding
     public void dequeue() {
         if (queue.isEmpty()) {
             System.out.println("Antrian kosong!");
         } else {
-            System.out.println(queue.poll() + " sudah boarding.");
+            System.out.println("Depan: " + queue.peek());
         }
     }
 
-// Lihat Depan
-public void peek() {
-    if (queue.isEmpty()) {
-        System.out.println("Antrian kosong!");
-    } else {
-        System.out.println(queue.poll() + " sudah boarding.");
-    }
-}
-
-// Tampilkan semua
-public void display() {
-    if (queue.isEmpty()) {
-        System.out.println("Antrian kosong!");
-    } else {
-        System.out.println("Isi antrian: ");
-        for (String p : queue){
-            System.out.println("- " + p);
+    // Tampilkan semua
+    public void display() {
+        if (queue.isEmpty()) {
+            System.out.println("Antrian kosong!");
+        } else {
+            System.out.println("Isi antrian:");
+            for (String p : queue) {
+                System.out.println("- " + p);
+            }
         }
-}
-}
-}
+    }}
