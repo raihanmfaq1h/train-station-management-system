@@ -31,7 +31,7 @@ public class TrainSchedule {
         data[size] = t;
 
         size++;
-        System.out.println("kereta " + t.getId() + " (" + t.getName() + ") berhasil ditambahkan.");   
+        System.out.println("kereta " + t.getId() + " berhasil ditambahkan.");   
     }
     public void removeTrain(String id) {
         for (int i = 0; i < size; i++) {
