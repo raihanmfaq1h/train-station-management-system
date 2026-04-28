@@ -7,7 +7,7 @@ public class Train{
     private String destination;
     private String departureTime;
 
-    public Train(String name, String id, String origin, String destination, String departureTime){
+    public Train(String name, String id, String origin, String destination, String departureTime) {
         this.name = name;
         this.id = id;
         this.origin = origin;
@@ -15,7 +15,7 @@ public class Train{
         this.departureTime = departureTime;
     }
 
-    public String getName(){
+    public String getNameString(){
         return this.name;
     }
     public String getId(){
