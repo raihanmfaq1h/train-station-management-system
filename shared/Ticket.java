@@ -1,3 +1,5 @@
+package shared;
+
 public class Ticket {
     private String passengerId;
     private String trainId;

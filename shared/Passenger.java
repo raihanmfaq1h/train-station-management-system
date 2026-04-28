@@ -1,3 +1,5 @@
+package shared;
+
 public class Passenger {
     private String id;
     private String name;

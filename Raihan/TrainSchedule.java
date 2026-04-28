@@ -1,34 +1,9 @@
+package Raihan;
+import shared.Train;
+
+
 public class TrainSchedule {
-    static class Train {
-        String id;
-        String name;
-        String origin;
-        String destination;
-        String departureTime;
 
-        public Train(String id, String name, String origin, String destination, String departureTime) {
-
-            this.id = id;
-            this.name = name;
-            this.origin = origin;
-            this.destination = destination;
-            this.departureTime = departureTime;
-
-        }
-
-        public String getId()               { return id;            }
-        public String getName()             { return name;          }
-        public String getOrigin()           { return origin;        }
-        public String getDestination()      { return destination;   }
-        public String getDepartureTime()    { return departureTime; }
-
-        @Override
-        public String toString() {
-            return "[" + id + "] " + name + " | " + origin + " -> " + destination + " | " + departureTime;
-
-        }
-    }
-    
     private Train[] data;
     private int size;
     private static final int INITIAL_CAPACITY = 2;

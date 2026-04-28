@@ -9,7 +9,7 @@ public class TrainScheduleDemo {
         schedule.addTrain(new Train("T001", "Argo Bromo", "Jakarta", "Surabaya", "07:00"));
         schedule.addTrain(new Train("T002", "Gajayana", "Jakarta", "Malang", "08:30"));
         schedule.addTrain(new Train("T003", "Taksaka", "Yogyakarta", "Jakarta", "06:00"));
-        schedule.addTrain(new Train("T004", "Sembrani", "Jakarta", "Surabaya", "20:00"));
+        schedule.addTrain(new Train("T004", "Sembrani", "Jakarta", "Surabaya", "06:00"));
 
         schedule.listAll();
 

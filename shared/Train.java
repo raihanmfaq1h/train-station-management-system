@@ -1,37 +1,35 @@
 package shared;
-public class Train {
 
+public class Train{
+    private String name;
     private String id;
     private String origin;
     private String destination;
+    private String departureTime;
 
-    // Constructor
-    public Train(String id, String origin, String destination) {
+    public Train(String name, String id, String origin, String destination, String departureTime){
+        this.name = name;
         this.id = id;
         this.origin = origin;
         this.destination = destination;
+        this.departureTime = departureTime;
     }
 
-    // Getter
-    public String getId() {
-        return id;
+    public String getName(){
+        return this.name;
+    }
+    public String getId(){
+        return this.id;
+    }
+    public String getOrigin(){
+        return this.origin;
+    }
+    public String getDestination(){
+        return this.destination;
+    }
+    public String getDepartureTime(){
+        return this.departureTime;
     }
 
-    public String getOrigin() {
-        return origin;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    // Optional: Setter (kalau mau fleksibel) 
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
-    //To
+    
+}
