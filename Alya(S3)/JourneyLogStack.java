@@ -1,21 +1,21 @@
-class TrainHistoryStrack {
+class JourneyLogStack {
 
     // Node class(linked list)
     class Node {
         String data;
-        Node ext;
+        Node next;
 
         Node(String data) {
             this.data = data;
-            thisnext = null;
+            this.next = null;
         }
-    }
-     
+    }  
+
     private Node top;
     private int size;
 
     // Constructor
-    public TrainHistoryStrack() {
+    public JourneyLogStack() {
         top = null;
         size = 0;
     }
@@ -31,7 +31,7 @@ class TrainHistoryStrack {
     }
 
     // POP hapus data teratas
-    public void pop() {
+    public void pop () {
         if (isEmpty()) {
             System.out.println("Eror: Riwayat kosong");
             return;
@@ -43,7 +43,7 @@ class TrainHistoryStrack {
     }
 
     // PEEK lihat data teratas
-    public String peek(){
+    public String peek() {
         if (isEmpty()) {
             return "kosong";
         }
@@ -62,7 +62,7 @@ class TrainHistoryStrack {
 
     // DISPLAY
     public void displayHistory() {
-        if (isEmpty(() {
+        if (isEmpty()) {
             System.out.println("Riwayat kosong.");
             return;
         }
@@ -75,7 +75,6 @@ class TrainHistoryStrack {
             System.out.println(nomor + "." + current.data);
             current = current.next;
             nomor--;
-     }
+        }
     }
 }
- 
