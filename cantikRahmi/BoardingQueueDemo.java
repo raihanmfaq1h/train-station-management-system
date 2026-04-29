@@ -7,12 +7,12 @@ public class BoardingQueueDemo {
 
         queue.enqueue(new Passenger("PX01", "Rina Kartika", "Eksekutif"));
         queue.enqueue(new Passenger("PX02", "Dodi Prasetyo", "Bisnis"));
-        queue.enqueue(new Passenger("PX03", "Susi Susilawati", "Ekonomi"));
+        queue.enqueue(new Passenger("PX03", "Ani Sulistyo", "Ekonomi"));
 
         // Tampilkan antrian
         queue.displayQueue();
 
-        // lihat yang depan
+        // lihatn yang depan
         System.out.println("Berikutnya: " + queue.peek().getName());
 
         // proses boarding
@@ -22,6 +22,6 @@ public class BoardingQueueDemo {
         queue.displayQueue();
 
         queue.dequeue();
-        queue.dequeue(); // harus muncul error
+        queue.dequeue(); // already empty
     }
 }
