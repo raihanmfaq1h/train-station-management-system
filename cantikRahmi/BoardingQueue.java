@@ -66,7 +66,7 @@ public class BoardingQueue {
         return front.data;
     }
 
-    // cek kosong 
+    // cek kosng
     public boolean isEmpty() {
         return front == null;
     }
@@ -77,23 +77,24 @@ public class BoardingQueue {
     }
 
     // tampilkan queue
-    public void displayQueue() {
+    public void displayQueue(){
         if (isEmpty()) {
             System.out.println("=== Antrian Boarding kosong ===");
             return;
         }
 
-        System.out.println("=== Anttian Boarding (" + size + " penumpang) ===");
+        System.out.println("=== Antrian Boarding (" + size + " penumpang) ===");
 
         Node current = front;
         int i = 1;
 
         while (current != null) {
             Passenger p = current.data;
-            System.out.println(i + ". [" + p.getId() + "] " 
-                  + p.getName() +" - " + p.getTicketClass());
-                  current = current.next;
-                  i++;
+            System.out.println(i + ". [" + p.getId() + "] "
+                    + p.getName() + " - " + p.getTicketClass());
+                    current = current.next;
+                    i++;
         }
     }
 }
+
