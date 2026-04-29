@@ -8,7 +8,7 @@ public class BoardingQueue {
         Passenger data;
         Node next;
 
-        Node (Passenger data) {
+        Node(Passenger data) {
             this.data = data;
             this.next = null;
         }
@@ -41,17 +41,17 @@ public class BoardingQueue {
     // dequeue (ambil dari depan)
     public Passenger dequeue() {
         if (isEmpty()) {
-            System.out.println("Error: Antrian boarding sudah kosong.");
+            System.out.println("Error Antrian boarding sudah.");
             return null;
         }
 
         Passenger removed = front.data;
         System.out.println("Boarding: " + removed.getName());
-
-        front = front.next;// pindah ke node berikutnya 
-        size++;
         
-        if (front == null) {
+        front = front.next; // pindah ke node berikutnya
+        size++;
+
+        if(front == null) {
             rear = null;
         }
 
@@ -60,13 +60,13 @@ public class BoardingQueue {
 
     // lihat depan
     public Passenger peek() {
-        if (isEmpty()) {
+        if(isEmpty()) {
             return null;
         }
         return front.data;
     }
 
-    // cek kosong
+    // cek kosong 
     public boolean isEmpty() {
         return front == null;
     }
@@ -81,19 +81,19 @@ public class BoardingQueue {
         if (isEmpty()) {
             System.out.println("=== Antrian Boarding kosong ===");
             return;
-            }
+        }
 
-            System.out.println("=== Antrian Boarding (" + size + " penumpang) ===");
+        System.out.println("=== Anttian Boarding (" + size + " penumpang) ===");
 
-            Node current = front;
-            int i = 1;
+        Node current = front;
+        int i = 1;
 
-            while (current != null) {
-                Passenger p = current.data;
-                System.out.println(i + ". [" + p.getId() + "] " 
-                        + p.getName() + " - " + p.getTicketClass());
-                current = current.next;
-                i++;
-            }
+        while (current != null) {
+            Passenger p = current.data;
+            System.out.println(i + ". [" + p.getId() + "] " 
+                  + p.getName() +" - " + p.getTicketClass());
+                  current = current.next;
+                  i++;
         }
     }
+}
