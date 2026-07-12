@@ -69,6 +69,7 @@ public class PriorityBoardingQueue {
             System.out.println("Antrian boarding kosong.");
             return null;
         }
+        return front.passenger;
     }
 
     // Method isEmpty()
@@ -76,7 +77,7 @@ public class PriorityBoardingQueue {
         return size == 0;
     }
 
-    // Method Dosplay()
+    // Method Display Queue()
     public void display() {
         if  (isEmpty()) {
             System.out.println("Antrian boarding kosong");
