@@ -66,7 +66,7 @@ public class BoardingQueue {
         return front.data;
     }
 
-    // cek kosng
+    // cek kosong
     public boolean isEmpty() {
         return front == null;
     }
